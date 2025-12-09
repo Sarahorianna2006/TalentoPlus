@@ -1,0 +1,68 @@
+@model Web.Admin.ViewModels.EmployeeVm
+
+<h2>@(Model.Document == null ? "Crear Empleado" : "Editar Empleado")</h2>
+
+<form method="post">
+    <!-- Documento (lo usas como identificador único) -->
+    <div class="mb-3">
+        <label>Documento</label>
+        <input class="form-control" asp-for="Document" readonly />
+    </div>
+
+    <!-- Nombre -->
+    <div class="mb-3">
+        <label>Nombre</label>
+        <input class="form-control" asp-for="FullName" />
+    </div>
+    
+    <!-- Email -->
+    <div class="mb-3">
+        <label>Email</label>
+        <input class="form-control" asp-for="Email" />
+    </div>
+
+    <!-- Teléfono -->
+    <div class="mb-3">
+        <label>Teléfono</label>
+        <input class="form-control" asp-for="Phone" />
+    </div>
+
+    <!-- Departamento -->
+    <div class="mb-3">
+        <label>Departamento</label>
+        <input class="form-control" asp-for="Department" />
+    </div>
+
+    <!-- Fecha de ingreso -->
+    <div class="mb-3">
+        <label>Fecha de Ingreso</label>
+        <input class="form-control" type="date" asp-for="EntryDate" />
+    </div>
+
+    <!-- Estado -->
+    <div class="mb-3">
+        <label>Estado</label>
+        <input class="form-control" asp-for="State" />
+    </div>
+
+    <!-- Salario -->
+    <div class="mb-3">
+        <label>Salario</label>
+        <input class="form-control" type="number" asp-for="Salary" />
+    </div>
+
+    <!-- Perfil profesional -->
+    <div class="mb-3">
+        <label>Perfil Profesional</label>
+        <input class="form-control" asp-for="ProfessionalProfile" />
+    </div>
+
+    <!-- Nivel educativo -->
+    <div class="mb-3">
+        <label>Nivel Educativo</label>
+        <input class="form-control" asp-for="EducationalLevel" />
+    </div>
+
+    <button class="btn btn-primary">Guardar</button>
+    <a href="/Employees" class="btn btn-secondary">Cancelar</a>
+</form>

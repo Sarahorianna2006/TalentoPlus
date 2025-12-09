@@ -1,0 +1,95 @@
+@model Web.Admin.ViewModels.DashboardMetricsVm
+@{
+    ViewData["Title"] = "Panel Administrativo";
+}
+
+<div class="container mt-4">
+
+    <h2 class="mb-4 text-primary fw-bold">Panel Administrativo</h2>
+
+
+    <!-- MÉTRICAS EN TARJETAS -->
+   
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+                <div class="card-body text-center">
+                    <h5 class="text-muted">Total Empleados</h5>
+                    <h2 class="fw-bold text-primary">@Model.Total</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+                <div class="card-body text-center">
+                    <h5 class="text-muted">Empleados Activos</h5>
+                    <h2 class="fw-bold text-success">@Model.Activos</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+                <div class="card-body text-center">
+                    <h5 class="text-muted">Empleados Inactivos</h5>
+                    <h2 class="fw-bold text-danger">
+                        @(Model.Total - Model.Activos)
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- EMPLEADOS POR PROGRAMA -->
+    <div class="card shadow-sm border-0 mt-4">
+        <div class="card-body">
+            <h5 class="fw-bold text-secondary mb-3">Empleados por Programa</h5>
+
+            @if (Model.PorPrograma == null || !Model.PorPrograma.Any())
+            {
+                <p class="text-muted">No hay programas registrados.</p>
+            }
+            else
+            {
+                <ul class="list-group">
+                    @foreach (var p in Model.PorPrograma)
+                    {
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>@p.Program</span>
+                            <span class="fw-bold">@p.Total</span>
+                        </li>
+                    }
+                </ul>
+            }
+        </div>
+    </div>
+    
+    <!-- IA QUERY SECTION -->
+    <div class="card shadow-sm border-0 mt-5 mb-5">
+        <div class="card-body">
+            <h4 class="fw-bold text-primary mb-3">Asistente Inteligente</h4>
+
+            <form method="post" asp-action="Ask">
+                <div class="input-group">
+                    <input name="question" class="form-control form-control-lg" 
+                           placeholder="Ej: ¿Cuántos empleados están inactivos?" required />
+
+                    <button class="btn btn-primary btn-lg">
+                        Preguntar IA
+                    </button>
+                </div>
+            </form>
+
+            @if (ViewBag.Answer != null)
+            {
+                <div class="alert alert-info mt-4 shadow-sm">
+                    <strong>Respuesta:</strong> @ViewBag.Answer
+                </div>
+            }
+        </div>
+    </div>
+
+</div>
