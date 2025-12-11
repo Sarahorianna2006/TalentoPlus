@@ -14,6 +14,12 @@ public class EmployeesController : Controller
     {
         _api = api;
     }
+    
+    private async Task LoadPrograms()
+    {
+        var programs = await _api.GetAsync<List<ProgramVm>>("api/Programs");
+        ViewBag.Programs = programs ?? new List<ProgramVm>();
+    }
 
     // LISTADO
     public async Task<IActionResult> Index()
@@ -23,10 +29,10 @@ public class EmployeesController : Controller
     }
     
     // get create
-    [HttpGet("Employees/Create")]
-    public IActionResult Create()
+    public async Task<IActionResult> Create()
     {
-        return View();
+        await LoadPrograms();
+        return View(new EmployeeVm());
     }
     
     // POST CREATE
@@ -35,26 +41,24 @@ public class EmployeesController : Controller
     public async Task<IActionResult> Create(EmployeeVm vm)
     {
         if (!ModelState.IsValid)
+        {
+            await LoadPrograms();
             return View(vm);
+        }
 
         // Separar FullName → Name + LastName
         var parts = vm.FullName?.Trim().Split(" ");
-
         var name = parts != null && parts.Length > 0 ? parts[0] : "";
         var lastName = parts != null && parts.Length > 1
             ? string.Join(" ", parts.Skip(1))
             : "";
 
-        // Program REAL de tu BD
-        var programId = Guid.Parse("9d44276f-ac17-43cb-bc67-df7dfabc5b59");
-
-        // Construir DTO EXACTO para la API
         var dto = new
         {
             document = vm.Document,
             name = name,
             lastName = lastName,
-            dateOfBirth = "2000-01-01", 
+            dateOfBirth = "2000-01-01",
             address = "N/A",
             phone = vm.Phone,
             email = vm.Email,
@@ -66,11 +70,11 @@ public class EmployeesController : Controller
             professionalProfile = vm.ProfessionalProfile,
             department = vm.Department,
 
-            programId = programId,
+            programId = vm.ProgramId,   // AHORA VIENE DEL SELECT
 
             program = new {
-                code = "SIS",
-                name = "Ingeniería de Sistemas"
+                code = "",
+                name = ""
             }
         };
 
@@ -79,11 +83,13 @@ public class EmployeesController : Controller
         if (!ok)
         {
             ModelState.AddModelError("", "No se pudo crear el empleado.");
+            await LoadPrograms();
             return View(vm);
         }
 
         return RedirectToAction(nameof(Index));
     }
+
     
     // GET EDIT
     [HttpGet("Employees/Edit/{document}")]

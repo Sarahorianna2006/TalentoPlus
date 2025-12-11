@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "DChitnxx3udsgKzPwAAZtGUUDxyUU1SBfvGDVsRXpiY0TcPKzktQP/apNXNYC/gT5Xwn1jDi/d9GSkyLsJDI/g==",
+  "dgSpecHash": "FkOQTaPPreI=",
   "success": true,
-  "projectFilePath": "/home/sarah/RiderProjects/TalentoPlus/src/Domain/Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/coders/RiderProjects/TalentoPlus/src/Domain/Domain.csproj",
+  "expectedPackageFiles": [
+    "/home/coders/.nuget/packages/microsoft.netcore.app.ref/8.0.22/microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
+    "/home/coders/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.22/microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512"
+  ],
   "logs": []
 }

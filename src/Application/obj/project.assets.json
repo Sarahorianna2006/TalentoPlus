@@ -27,32 +27,33 @@
     ]
   },
   "packageFolders": {
-    "/home/sarah/.nuget/packages/": {}
+    "/home/coders/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/sarah/RiderProjects/TalentoPlus/src/Application/Application.csproj",
+      "projectUniqueName": "/home/coders/RiderProjects/TalentoPlus/src/Application/Application.csproj",
       "projectName": "Application",
-      "projectPath": "/home/sarah/RiderProjects/TalentoPlus/src/Application/Application.csproj",
-      "packagesPath": "/home/sarah/.nuget/packages/",
-      "outputPath": "/home/sarah/RiderProjects/TalentoPlus/src/Application/obj/",
+      "projectPath": "/home/coders/RiderProjects/TalentoPlus/src/Application/Application.csproj",
+      "packagesPath": "/home/coders/.nuget/packages/",
+      "outputPath": "/home/coders/RiderProjects/TalentoPlus/src/Application/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/sarah/.nuget/NuGet/NuGet.Config"
+        "/home/coders/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "/usr/lib/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/home/sarah/RiderProjects/TalentoPlus/src/Domain/Domain.csproj": {
-              "projectPath": "/home/sarah/RiderProjects/TalentoPlus/src/Domain/Domain.csproj"
+            "/home/coders/RiderProjects/TalentoPlus/src/Domain/Domain.csproj": {
+              "projectPath": "/home/coders/RiderProjects/TalentoPlus/src/Domain/Domain.csproj"
             }
           }
         }
@@ -61,7 +62,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -77,12 +84,22 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.22, 8.0.22]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.22, 8.0.22]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.112/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

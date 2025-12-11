@@ -76,6 +76,18 @@
         <label>Nivel Educativo</label>
         <input class="form-control" asp-for="EducationalLevel"/>
     </div>
+    
+    <div class="mb-3">
+        <label>Programa</label>
+        <select class="form-control" asp-for="ProgramId">
+            <option value="">Seleccione un programa</option>
+
+            @foreach (var p in ViewBag.Programs)
+            {
+                <option value="@p.Id">@p.Name</option>
+            }
+        </select>
+    </div>
 
     <button class="btn btn-primary">Guardar</button>
     <a href="/Employees" class="btn btn-secondary">Cancelar</a>

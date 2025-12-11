@@ -12,4 +12,6 @@ public class EmployeeVm
     public double Salary { get; set; }
     public string ProfessionalProfile { get; set; }
     public string EducationalLevel { get; set; }
+    public Guid? ProgramId { get; set; }
+
 }
