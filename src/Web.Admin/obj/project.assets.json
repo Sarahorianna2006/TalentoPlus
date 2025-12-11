@@ -1908,11 +1908,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/sarah/Prueba_Sarah/talentoplus/src/Web.Admin/Web.Admin.csproj",
+      "projectUniqueName": "/home/sarah/RiderProjects/TalentoPlus/src/Web.Admin/Web.Admin.csproj",
       "projectName": "Web.Admin",
-      "projectPath": "/home/sarah/Prueba_Sarah/talentoplus/src/Web.Admin/Web.Admin.csproj",
+      "projectPath": "/home/sarah/RiderProjects/TalentoPlus/src/Web.Admin/Web.Admin.csproj",
       "packagesPath": "/home/sarah/.nuget/packages/",
-      "outputPath": "/home/sarah/Prueba_Sarah/talentoplus/src/Web.Admin/obj/",
+      "outputPath": "/home/sarah/RiderProjects/TalentoPlus/src/Web.Admin/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/sarah/.nuget/NuGet/NuGet.Config"
@@ -1927,11 +1927,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/home/sarah/Prueba_Sarah/talentoplus/src/Application/Application.csproj": {
-              "projectPath": "/home/sarah/Prueba_Sarah/talentoplus/src/Application/Application.csproj"
+            "/home/sarah/RiderProjects/TalentoPlus/src/Application/Application.csproj": {
+              "projectPath": "/home/sarah/RiderProjects/TalentoPlus/src/Application/Application.csproj"
             },
-            "/home/sarah/Prueba_Sarah/talentoplus/src/Infrastructure/Infrastructure.csproj": {
-              "projectPath": "/home/sarah/Prueba_Sarah/talentoplus/src/Infrastructure/Infrastructure.csproj"
+            "/home/sarah/RiderProjects/TalentoPlus/src/Infrastructure/Infrastructure.csproj": {
+              "projectPath": "/home/sarah/RiderProjects/TalentoPlus/src/Infrastructure/Infrastructure.csproj"
             }
           }
         }
@@ -1940,13 +1940,7 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.300"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -1976,7 +1970,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/sarah/.dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

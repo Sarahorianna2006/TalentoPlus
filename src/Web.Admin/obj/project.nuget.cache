@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gy2K9rA+5Zs=",
+  "dgSpecHash": "0hJlIYi+6Fg1M+hCwo9ToG3c8XODr3acahcP5Ec5rJryZxAp/Bm5E+FO00mYGsWPgdNWJ5GcZSTZ+3DNwlxezQ==",
   "success": true,
-  "projectFilePath": "/home/sarah/Prueba_Sarah/talentoplus/src/Web.Admin/Web.Admin.csproj",
+  "projectFilePath": "/home/sarah/RiderProjects/TalentoPlus/src/Web.Admin/Web.Admin.csproj",
   "expectedPackageFiles": [
     "/home/sarah/.nuget/packages/bouncycastle.cryptography/2.6.1/bouncycastle.cryptography.2.6.1.nupkg.sha512",
     "/home/sarah/.nuget/packages/closedxml/0.105.0/closedxml.0.105.0.nupkg.sha512",

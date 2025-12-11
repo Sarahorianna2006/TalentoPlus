@@ -1,66 +1,80 @@
 @model Web.Admin.ViewModels.EmployeeVm
 
-<h2>@(Model.Document == null ? "Crear Empleado" : "Editar Empleado")</h2>
+@{
+    // Detectamos si estamos en modo edición
+    var isEdit = Model?.Document != null;
+}
 
-<form method="post">
+<h2 class="mb-3">@((isEdit) ? "Editar Empleado" : "Crear Empleado")</h2>
+
+<form method="post" asp-action="@(isEdit ? "Edit" : "Create")">
+    <!-- Si es editar, enviamos el documento escondido -->
+    @if (isEdit)
+    {
+        <input type="hidden" asp-for="Document" />
+    }
+    
     <!-- Documento (lo usas como identificador único) -->
-    <div class="mb-3">
-        <label>Documento</label>
-        <input class="form-control" asp-for="Document" readonly />
-    </div>
+        <!-- Documento -->
+        <div class="mb-3">
+            <label>Documento</label>
+            <input class="form-control"
+                   asp-for="Document"
+                   readonly="@(isEdit ? "readonly" : null)" />
+        </div>
 
     <!-- Nombre -->
     <div class="mb-3">
         <label>Nombre</label>
-        <input class="form-control" asp-for="FullName" />
+        <input class="form-control" asp-for="FullName"/>
     </div>
-    
+
     <!-- Email -->
     <div class="mb-3">
         <label>Email</label>
-        <input class="form-control" asp-for="Email" />
+        <input class="form-control" asp-for="Email"/>
     </div>
 
     <!-- Teléfono -->
     <div class="mb-3">
         <label>Teléfono</label>
-        <input class="form-control" asp-for="Phone" />
+        <input class="form-control" asp-for="Phone"/>
     </div>
 
     <!-- Departamento -->
     <div class="mb-3">
         <label>Departamento</label>
-        <input class="form-control" asp-for="Department" />
+        <input class="form-control" asp-for="Department"/>
     </div>
 
     <!-- Fecha de ingreso -->
     <div class="mb-3">
         <label>Fecha de Ingreso</label>
-        <input class="form-control" type="date" asp-for="EntryDate" />
+        <input class="form-control" type="date" asp-for="EntryDate"/>
     </div>
 
     <!-- Estado -->
     <div class="mb-3">
         <label>Estado</label>
-        <input class="form-control" asp-for="State" />
+        <input class="form-control" asp-for="State"/>
     </div>
 
     <!-- Salario -->
     <div class="mb-3">
         <label>Salario</label>
-        <input class="form-control" type="number" asp-for="Salary" />
+        <input class="form-control" type="number" asp-for="Salary"/>
     </div>
 
     <!-- Perfil profesional -->
     <div class="mb-3">
         <label>Perfil Profesional</label>
-        <input class="form-control" asp-for="ProfessionalProfile" />
+        <input class="form-control" asp-for="ProfessionalProfile"/>
     </div>
 
     <!-- Nivel educativo -->
     <div class="mb-3">
         <label>Nivel Educativo</label>
-        <input class="form-control" asp-for="EducationalLevel" />
+        <input class="form-control" asp-for="EducationalLevel"/>
     </div>
 
     <button class="btn btn-primary">Guardar</button>

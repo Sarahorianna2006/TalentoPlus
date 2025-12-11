@@ -9,3 +9,15 @@
 /home/sarah/talentoplus/src/Domain/obj/Debug/net8.0/refint/Domain.dll
 /home/sarah/talentoplus/src/Domain/obj/Debug/net8.0/Domain.pdb
 /home/sarah/talentoplus/src/Domain/obj/Debug/net8.0/ref/Domain.dll
+/home/sarah/RiderProjects/TalentoPlus/src/Domain/bin/Debug/net8.0/Domain.deps.json
+/home/sarah/RiderProjects/TalentoPlus/src/Domain/bin/Debug/net8.0/Domain.dll
+/home/sarah/RiderProjects/TalentoPlus/src/Domain/bin/Debug/net8.0/Domain.pdb
+/home/sarah/RiderProjects/TalentoPlus/src/Domain/obj/Debug/net8.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/sarah/RiderProjects/TalentoPlus/src/Domain/obj/Debug/net8.0/Domain.AssemblyInfoInputs.cache
+/home/sarah/RiderProjects/TalentoPlus/src/Domain/obj/Debug/net8.0/Domain.AssemblyInfo.cs
+/home/sarah/RiderProjects/TalentoPlus/src/Domain/obj/Debug/net8.0/Domain.csproj.CoreCompileInputs.cache
+/home/sarah/RiderProjects/TalentoPlus/src/Domain/obj/Debug/net8.0/Domain.sourcelink.json
+/home/sarah/RiderProjects/TalentoPlus/src/Domain/obj/Debug/net8.0/Domain.dll
+/home/sarah/RiderProjects/TalentoPlus/src/Domain/obj/Debug/net8.0/refint/Domain.dll
+/home/sarah/RiderProjects/TalentoPlus/src/Domain/obj/Debug/net8.0/Domain.pdb
+/home/sarah/RiderProjects/TalentoPlus/src/Domain/obj/Debug/net8.0/ref/Domain.dll

@@ -31,14 +31,29 @@ public class ApiClient
     }
 
     // POST genérico
+    
     public async Task<bool> PostAsync<T>(string url, T data)
     {
         var json = JsonSerializer.Serialize(data);
         var content = new StringContent(json, Encoding.UTF8, "application/json");
 
         var response = await _http.PostAsync(url, content);
+
+        var body = await response.Content.ReadAsStringAsync();
+        Console.WriteLine("⚠️ RESPUESTA API:");
+        Console.WriteLine(body);
+
         return response.IsSuccessStatusCode;
     }
+
+    // public async Task<bool> PostAsync<T>(string url, T data)
+    // {
+    //     var json = JsonSerializer.Serialize(data);
+    //     var content = new StringContent(json, Encoding.UTF8, "application/json");
+    //
+    //     var response = await _http.PostAsync(url, content);
+    //     return response.IsSuccessStatusCode;
+    // }
 
     // POST que devuelve un objeto (para IA: ai/query)
     public async Task<TResponse?> PostForResultAsync<TResponse>(string url, object data)

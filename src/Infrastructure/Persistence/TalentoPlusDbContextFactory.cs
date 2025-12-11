@@ -10,7 +10,7 @@ public class TalentoPlusDbContextFactory : IDesignTimeDbContextFactory<TalentoPl
         var optionsBuilder = new DbContextOptionsBuilder<TalentoPlusDbContext>();
 
         var connectionString =
-            "Server=localhost;Port=3306;Database=talentoplusdb;User=root;Password=1234;";
+            "Server=localhost;Port=3306;Database=talentoplusdb;User=root;Password=Qwe.123*;";
 
         optionsBuilder.UseMySql(
             connectionString,
